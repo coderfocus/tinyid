@@ -15,6 +15,7 @@
         <spring.version>1.5.9.RELEASE</spring.version>
         <nacos.registry.version>1.5.1.RELEASE</nacos.registry.version>
         <nacos.config.version>1.5.1.RELEASE</nacos.config.version>
+        <druid.version>1.1.21</druid.version>
     </properties>
 
     <dependencies>
@@ -82,7 +83,11 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>${nacos.config.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -93,12 +98,12 @@
             </properties>
         </profile>
         <profile>
-            <id>offline</id>
+            <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <package.environment>offline</package.environment>
+                <package.environment>dev</package.environment>
             </properties>
         </profile>
     </profiles>
