@@ -13,6 +13,8 @@
 
     <properties>
         <spring.version>1.5.9.RELEASE</spring.version>
+        <nacos.registry.version>1.5.1.RELEASE</nacos.registry.version>
+        <nacos.config.version>1.5.1.RELEASE</nacos.config.version>
     </properties>
 
     <dependencies>
@@ -62,13 +64,25 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.44</version>
+            <version>8.0.25</version>
         </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>${nacos.registry.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>${nacos.config.version}</version>
+        </dependency>
+
     </dependencies>
 
     <profiles>
